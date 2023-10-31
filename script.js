@@ -3,12 +3,11 @@ let input = prompt("Please provide a list of flavors. Separate each on with a co
 //to enter a list of comma-separated froyo flavors
 //The user types, "vanilla,vanilla,vanilla,strawberry,coffee,coffee"; should console.log vanilla = 3, strawberry = 1, coffee = 2;
 //
-console.log(input);
+//console.log(input);
 
 //The user's input striing is split into an array of strings.
 let onlineOrder = [];
 onlineOrder = input.split(",");
-console.log(onlineOrder);
 
 //Define the list of available flavors
 const froyoList = ["vanilla","strawberry","coffee","chocolate","mint","fudge"];
@@ -22,9 +21,26 @@ let onlineOrderFlavorCount = {
     mint: 0,
     fudge: 0,
 };
+//Use a loop to iterate though the array of flavors
+for (let i=0; i<onlineOrder.length; i++) {
+    //check if the online order input is included in the list of flavors in froyoList
+        const flavor = onlineOrder[i].trim();
+    //If the input does include a string within the list of flavors, add it to the onlineOrderFlavorCount;
+        if (froyoList.includes(flavor)) {
+            onlineOrderFlavorCount[flavor]++;
+    //otherwise, let the user know that flavor is not in the  list.
+        } else {
+            console.log(`Sorry ${flavor} is not in our current selection.`);
+        }
+}
 
-
-
-
+// for (let i in onlineOrder){
+//     const flavor = onlineOrder[i];
+//     if (froyoList.indexOf(flavor) !== -1) {
+//         onlineOrderFlavorCount[flavor]++;
+//         } else {
+//             console.log(`Sorry ${flavor} is not in our current selection.`);
+//             }
+// }
 
 console.log(onlineOrderFlavorCount);
