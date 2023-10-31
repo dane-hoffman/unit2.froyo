@@ -1,0 +1,1 @@
+const froyoList = [vanilla,strawberry,coffee,chocolate,mint,fudge];
