@@ -34,13 +34,20 @@ for (let i=0; i<onlineOrder.length; i++) {
         }
 }
 
-// for (let i in onlineOrder){
-//     const flavor = onlineOrder[i];
-//     if (froyoList.indexOf(flavor) !== -1) {
-//         onlineOrderFlavorCount[flavor]++;
-//         } else {
-//             console.log(`Sorry ${flavor} is not in our current selection.`);
-//             }
-// }
+//Create a function to display in the console, "You have ordered [count] of [flavor]"
+const displayOnlineOrderTotal = (count,flavor) => {
+    return `You have ordered ${count} of ${flavor}`;
+};
+//iterate through the object and add the updated values from the array, to the display function
+for (const flavor in onlineOrderFlavorCount) {
+//use the flavor and count of each item in the object,and display the total amount of that flavor
+    const count = onlineOrderFlavorCount[flavor];
+    console.log(displayOnlineOrderTotal(count, flavor))
+//only if the flavor is ordered
+    // if (count > 0){
+    //     ;
+    // }
+}
+        
 
-console.log(onlineOrderFlavorCount);
+// console.log(onlineOrderFlavorCount);
