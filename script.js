@@ -8,4 +8,5 @@ console.log(input);
 //The user's input striing is split into an array of strings.
 let onlineOrder = [];
 onlineOrder = input.split(",");
+console.log(onlineOrder);
 //const froyoList = [vanilla,strawberry,coffee,chocolate,mint,fudge];
