@@ -50,5 +50,3 @@ for (const flavor in onlineOrderFlavorCount) {
     }
 }
         
-
-// console.log(onlineOrderFlavorCount);
