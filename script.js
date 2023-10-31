@@ -9,4 +9,22 @@ console.log(input);
 let onlineOrder = [];
 onlineOrder = input.split(",");
 console.log(onlineOrder);
-//const froyoList = [vanilla,strawberry,coffee,chocolate,mint,fudge];
+
+//Define the list of available flavors
+const froyoList = ["vanilla","strawberry","coffee","chocolate","mint","fudge"];
+
+//create an object to keep count of how many orders of each flavor.
+let onlineOrderFlavorCount = {
+    vanilla: 0,
+    strawberry: 0,
+    coffee: 0,
+    chocolate: 0,
+    mint: 0,
+    fudge: 0,
+};
+
+
+
+
+
+console.log(onlineOrderFlavorCount);
