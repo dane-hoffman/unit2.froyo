@@ -6,8 +6,8 @@ let input = prompt("Please provide a list of flavors. Separate each on with a co
 //console.log(input);
 
 //The user's input striing is split into an array of strings.
-let onlineOrder = [];
-onlineOrder = input.split(",");
+
+let onlineOrder = input.split(",");
 
 //Define the list of available flavors
 const froyoList = ["vanilla","strawberry","coffee","chocolate","mint","fudge"];
@@ -28,12 +28,14 @@ for (let i=0; i<onlineOrder.length; i++) {
     //If the input does include a string within the list of flavors, add it to the onlineOrderFlavorCount;
         if (froyoList.includes(flavor)) {
             onlineOrderFlavorCount[flavor]++;
+        } else{
+            console.log(`${flavor} is not currently available.`);
         }
 }
 
 //Create a function to display in the console, "You have ordered [count] of [flavor]"
 const displayOnlineOrderTotal = (count,flavor) => {
-    return `You have ordered ${count} of ${flavor}`;
+    return `You ordered ${count} ${flavor}`;
 };
 //iterate through the object and add the updated values from the array, to the display function
 for (const flavor in onlineOrderFlavorCount) {
