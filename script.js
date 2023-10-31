@@ -42,11 +42,10 @@ const displayOnlineOrderTotal = (count,flavor) => {
 for (const flavor in onlineOrderFlavorCount) {
 //use the flavor and count of each item in the object,and display the total amount of that flavor
     const count = onlineOrderFlavorCount[flavor];
-    console.log(displayOnlineOrderTotal(count, flavor))
 //only if the flavor is ordered
-    // if (count > 0){
-    //     ;
-    // }
+    if (count > 0){
+        console.log(displayOnlineOrderTotal(count, flavor));
+    }
 }
         
 
