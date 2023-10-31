@@ -28,6 +28,7 @@ for (let i=0; i<onlineOrder.length; i++) {
     //If the input does include a string within the list of flavors, add it to the onlineOrderFlavorCount;
         if (froyoList.includes(flavor)) {
             onlineOrderFlavorCount[flavor]++;
+    //otherwise, let the user know that flavor is not in the  list.
         } else{
             console.log(`${flavor} is not currently available.`);
         }
@@ -44,9 +45,9 @@ for (const flavor in onlineOrderFlavorCount) {
 //only if the flavor is ordered
     if (count > 0){
         console.log(displayOnlineOrderTotal(count, flavor));
-        //otherwise, let the user know that flavor is not in the  list.
+        //otherwise, Ask the user if they are sure they don't want to try
     } else{
-        console.log(`Did you not want to try ${flavor}? It's delicious!`);
+        console.log(`Are you sure you don't want to try ${flavor}? It's delicious!`);
     }
 }
         
